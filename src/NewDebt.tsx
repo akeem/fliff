@@ -5,7 +5,7 @@ import './newdebt.css'
 export default function NewDebt() {
   return (
     <div className="newdebt">
-      <Link className="newlink" to="/">+</Link>
+      <Link className="newlink" to="/add">+</Link>
       <BalanceTable />
     </div>
   );

@@ -1,0 +1,32 @@
+label {
+    font-family: Mada;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    color: #575757;
+}
+
+input:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.fliff-it {
+    margin-top: auto;
+    height: 80px;
+    font-family: Mada;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    color: #575757;
+    border: thin #575757 solid;
+    cursor: not-allowed;
+}
+
+.fliff-it.valid {
+    color: #ffffff;
+    background-color: #FFC107;
+    border: thin #FFC107 solid;
+    cursor: pointer;
+}

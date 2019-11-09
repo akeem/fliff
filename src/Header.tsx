@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import './header.css'
+import logo from './fliff-logomark.svg'
 
 export const Header: React.FC = () => {
   return (
@@ -9,7 +10,9 @@ export const Header: React.FC = () => {
       <h1 className="header-title">
         FLiFF
       </h1>
-      <Link to="/list">Begin</Link>
+      <Link to="/list">
+        <img src={logo} alt="Fliff Logomark" />
+      </Link>
     </header>
   )
 };

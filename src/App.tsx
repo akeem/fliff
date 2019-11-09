@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './Home';
 import List from './List';
+import Add from './Add';
 import { ethers } from 'ethers';
 
 interface State {
@@ -51,6 +52,9 @@ export default class App extends React.Component<any, State> {
           </Route>
           <Route exact path="/list">
             <List />
+          </Route>
+          <Route exact path="/add">
+            <Add />
           </Route>
         </Switch>
       </Router>
