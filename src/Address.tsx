@@ -22,6 +22,6 @@ export default function Address({ address }: Props) {
   }, [address]);
 
   return (
-    <span>{ensName || address}</span>
+    <div>{ensName || address}</div>
   )
 }

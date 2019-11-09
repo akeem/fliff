@@ -1,0 +1,13 @@
+.newlink {
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    background-color: #BB19F3;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 48px;
+}

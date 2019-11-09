@@ -1,5 +1,6 @@
 nav {
     background-color: white;
+    padding: 0;
 }
 
 nav a {
@@ -10,4 +11,15 @@ nav a {
     line-height: 67px;
     letter-spacing: 2px;
     color: #FFC107;
+    width: 100%;
+}
+
+div.address {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.nav-container {
+    padding: 0;
 }

@@ -1,11 +1,28 @@
 import React from 'react';
 import Nav from './Nav';
+import Address from './Address';
+import NewDebt from './NewDebt';
+import './list.css'
+
+const balances: Balance[] = [
+  {
+    otherParty: '0x7ede84f17fdbd17cf820b6a984e6a3f62574ddd5',
+    kind: 'debit',
+    amount: 13.37,
+  },
+  {
+    otherParty: '0xaFAEfc6dd3C9feF66f92BA838b132644451F0715',
+    kind: 'credit',
+    amount: 1500,
+  },
+]
 
 export default function List() {
   return (
-    <div>
+    <div className="content">
       <Nav />
-      <ListContents balances={[]} />
+      <ListContents balances={balances} />
+      <NewDebt />
     </div>
   )
 }
@@ -22,28 +39,26 @@ interface ListContentsProps {
 
 function ListContents({ balances }: ListContentsProps) {
   return (
-    <ul>
-      {balances.map(balance => {
-        return (
-          <li key={balance.otherParty + '-' + balance.kind}>
-            <ListItem balance={balance} />
-          </li>
-        );
-      })}
-    </ul>
+    <div className="balances">
+    {balances.map(balance => {
+      return (
+        <ListItem balance={balance} key={balance.otherParty + '-' + balance.kind} />
+      );
+    })}
+    </div>
   )
 }
-
 
 interface ListItemProps {
   balance: Balance
 }
+
 function ListItem({ balance }: ListItemProps) {
   return (
-    <ul>
-      <li>{balance.kind}</li>
-      <li>{balance.otherParty}</li>
-      <li>{balance.amount}</li>
-    </ul>
+    <div className="balance">
+      <div><Address address={balance.otherParty} /></div>
+      <div>USDC</div>
+      <div className={balance.kind}><span>{balance.amount}</span></div>
+    </div>
   )
 }

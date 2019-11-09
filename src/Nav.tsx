@@ -22,7 +22,7 @@ export const Nav = () => {
         <div className="nav-logo">
           <Link to="/">FLiFF</Link>
         </div>
-        <div>
+        <div className="address">
           <Address address={address} />
         </div>
       </div>
