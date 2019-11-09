@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Home';
+import List from './List';
 import { ethers } from 'ethers';
 
 interface State {
@@ -47,6 +48,9 @@ export default class App extends React.Component<any, State> {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/list">
+            <List />
           </Route>
         </Switch>
       </Router>

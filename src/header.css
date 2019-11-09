@@ -1,9 +1,19 @@
 .header-title {
-    font-family: Barlow;
+    font-family: Barlow, sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 56px;
     line-height: 67px;
     letter-spacing: 2px;
     color: #FFFFFF;
+}
+
+.header-subtitle {
+    font-family: Mada, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.5;
 }

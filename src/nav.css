@@ -1,0 +1,13 @@
+nav {
+    background-color: white;
+}
+
+nav a {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 56px;
+    line-height: 67px;
+    letter-spacing: 2px;
+    color: #FFC107;
+}
