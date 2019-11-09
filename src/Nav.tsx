@@ -5,7 +5,7 @@ export const Nav = () => (
   <nav>
     <div className="nav-container">
       <div className="nav-logo">
-        <a href="/">Fliff</a>
+        <a href="/">fliff</a>
       </div>
     </div>
   </nav>
