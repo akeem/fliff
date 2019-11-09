@@ -13,7 +13,7 @@ const balances: Balance[] = [
   {
     otherParty: '0xaFAEfc6dd3C9feF66f92BA838b132644451F0715',
     kind: 'credit',
-    amount: 1500,
+    amount: 1500.01,
   },
 ]
 

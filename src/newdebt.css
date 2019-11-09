@@ -11,3 +11,27 @@
     text-align: center;
     font-size: 48px;
 }
+
+.newdebt {
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+.balancetable {
+    margin-left: 1em;
+}
+
+.balancetablecell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: thin #FFC107 solid;
+}
+
+.balancetablecell > div:nth-child(2) {
+    text-align: right;
+}
+
+.balancetablecell:first-child {
+    border-top: thin #FFC107 solid;
+}
