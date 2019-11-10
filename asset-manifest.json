@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fliff/static/css/main.9d4d29d5.chunk.css",
-    "main.js": "/fliff/static/js/main.3b16af9a.chunk.js",
-    "main.js.map": "/fliff/static/js/main.3b16af9a.chunk.js.map",
+    "main.js": "/fliff/static/js/main.e88bd538.chunk.js",
+    "main.js.map": "/fliff/static/js/main.e88bd538.chunk.js.map",
     "runtime-main.js": "/fliff/static/js/runtime-main.e8615fa0.js",
     "runtime-main.js.map": "/fliff/static/js/runtime-main.e8615fa0.js.map",
     "static/css/2.1bfb5f9e.chunk.css": "/fliff/static/css/2.1bfb5f9e.chunk.css",
     "static/js/2.8a63abf2.chunk.js": "/fliff/static/js/2.8a63abf2.chunk.js",
     "static/js/2.8a63abf2.chunk.js.map": "/fliff/static/js/2.8a63abf2.chunk.js.map",
     "index.html": "/fliff/index.html",
-    "precache-manifest.6f5cc7a9bda9a51316bf8599840d7bcb.js": "/fliff/precache-manifest.6f5cc7a9bda9a51316bf8599840d7bcb.js",
+    "precache-manifest.515f81a87663d3a319d09165d82d1fd6.js": "/fliff/precache-manifest.515f81a87663d3a319d09165d82d1fd6.js",
     "service-worker.js": "/fliff/service-worker.js",
     "static/css/2.1bfb5f9e.chunk.css.map": "/fliff/static/css/2.1bfb5f9e.chunk.css.map",
     "static/css/main.9d4d29d5.chunk.css.map": "/fliff/static/css/main.9d4d29d5.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.1bfb5f9e.chunk.css",
     "static/js/2.8a63abf2.chunk.js",
     "static/css/main.9d4d29d5.chunk.css",
-    "static/js/main.3b16af9a.chunk.js"
+    "static/js/main.e88bd538.chunk.js"
   ]
 }

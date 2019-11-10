@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c81aecea786b7271b214b0152065a512",
+    "revision": "d5a0bdc9e52949ca63adf124cba8e415",
     "url": "/fliff/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fliff/static/css/2.1bfb5f9e.chunk.css"
   },
   {
-    "revision": "4ee99465635edc2c5d8b",
+    "revision": "4783bcb1bf8ff3e4c321",
     "url": "/fliff/static/css/main.9d4d29d5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fliff/static/js/2.8a63abf2.chunk.js"
   },
   {
-    "revision": "4ee99465635edc2c5d8b",
-    "url": "/fliff/static/js/main.3b16af9a.chunk.js"
+    "revision": "4783bcb1bf8ff3e4c321",
+    "url": "/fliff/static/js/main.e88bd538.chunk.js"
   },
   {
     "revision": "d2d3a233659692a87f6b",
