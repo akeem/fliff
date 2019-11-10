@@ -1,6 +1,12 @@
 nav {
     background-color: white;
     padding: 0;
+    margin-bottom: 0.5em;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 nav a {
