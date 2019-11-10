@@ -5,36 +5,29 @@ import Nav from './Nav';
 import Address from './Address';
 import NewDebt from './NewDebt';
 import './list.css'
-
-const balances: Balance[] = [
-  {
-    otherParty: '0x7ede84f17fdbd17cf820b6a984e6a3f62574ddd5',
-    kind: 'debit',
-    amount: 13.37,
-  },
-  {
-    otherParty: '0xaFAEfc6dd3C9feF66f92BA838b132644451F0715',
-    kind: 'credit',
-    amount: 1500.01,
-  },
-]
+import mergeBalances from './dataMungers'
 
 const queryBy = (address: string) => gql`
   {
     debtor: debts(where: { _debtor: "${address}"}) {
-      id
-      count
       amount
       _debtor
+      _debtee
     }
     debtee: debts(where: { _debtee: "${address}"}) {
-      id
+      amount
+      _debtor
+      _debtee
     }
     settler: settlements(where: { _debtor: "${address}" }) {
-      id
+      amount
+      _debtor
+      _debtee
     }
     settlee: settlements(where: { _debtee: "${address}" }) {
-      id
+      amount
+      _debtor
+      _debtee
     }
   }
 `
@@ -60,32 +53,38 @@ export default function List({ address }: ListProps) {
       </div>
     )
   }
+
+  const mergedBalances = mergeBalances(data)
   
   return (
     <div className="content">
       <Nav />
-      <ListContents balances={balances} />
+      <ListContents balances={mergedBalances} />
       <NewDebt />
     </div>
   )
 }
 
-interface Balance {
-  kind: 'debit' | 'credit'
-  otherParty: string
-  amount: number
+interface Balances {
+  credits: {
+    [address: string]: number
+  }
+  debts: {
+    [address: string]: number
+  }
 }
 
 interface ListContentsProps {
-  balances: Balance[]
+  balances: Balances
 }
 
 function ListContents({ balances }: ListContentsProps) {
+  console.log(balances)
   return (
     <div className="balances">
-    {balances.map(balance => {
+    {Object.keys(balances.debts).map(debtor => {
       return (
-        <ListItem balance={balance} key={balance.otherParty + '-' + balance.kind} />
+        <ListItem address={debtor} value={balances.debts[debtor]} kind="debt" key={debtor} />
       );
     })}
     </div>
@@ -93,15 +92,17 @@ function ListContents({ balances }: ListContentsProps) {
 }
 
 interface ListItemProps {
-  balance: Balance
+  address: string
+  value: number
+  kind: 'debt' | 'credit'
 }
 
-function ListItem({ balance }: ListItemProps) {
+function ListItem({ address, value, kind }: ListItemProps) {
   return (
     <div className="balance">
-      <div><Address address={balance.otherParty} /></div>
+      <div><Address address={address} /></div>
       <div>USDC</div>
-      <div className={balance.kind}><span>{balance.amount}</span></div>
+      <div className={kind}><span>{value}</span></div>
     </div>
   )
 }
