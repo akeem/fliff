@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d4d29d5.chunk.css",
-    "main.js": "/static/js/main.eb018f5a.chunk.js",
-    "main.js.map": "/static/js/main.eb018f5a.chunk.js.map",
+    "main.css": "/static/css/main.ed540018.chunk.css",
+    "main.js": "/static/js/main.68253811.chunk.js",
+    "main.js.map": "/static/js/main.68253811.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19612134.js",
     "runtime-main.js.map": "/static/js/runtime-main.19612134.js.map",
     "static/css/2.1bfb5f9e.chunk.css": "/static/css/2.1bfb5f9e.chunk.css",
     "static/js/2.f5c63368.chunk.js": "/static/js/2.f5c63368.chunk.js",
     "static/js/2.f5c63368.chunk.js.map": "/static/js/2.f5c63368.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.522df3f9a609decb7f98808ffac48b52.js": "/precache-manifest.522df3f9a609decb7f98808ffac48b52.js",
+    "precache-manifest.16d5b8271e57cdff4dc5697719ecc248.js": "/precache-manifest.16d5b8271e57cdff4dc5697719ecc248.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1bfb5f9e.chunk.css.map": "/static/css/2.1bfb5f9e.chunk.css.map",
-    "static/css/main.9d4d29d5.chunk.css.map": "/static/css/main.9d4d29d5.chunk.css.map",
+    "static/css/main.ed540018.chunk.css.map": "/static/css/main.ed540018.chunk.css.map",
     "static/media/fliff-logomark.svg": "/static/media/fliff-logomark.68ab0e72.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.19612134.js",
     "static/css/2.1bfb5f9e.chunk.css",
     "static/js/2.f5c63368.chunk.js",
-    "static/css/main.9d4d29d5.chunk.css",
-    "static/js/main.eb018f5a.chunk.js"
+    "static/css/main.ed540018.chunk.css",
+    "static/js/main.68253811.chunk.js"
   ]
 }
