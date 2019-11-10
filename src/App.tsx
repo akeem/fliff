@@ -53,6 +53,18 @@ export default class App extends React.Component<any, State> {
         // User denied account access...
         console.log(error)
       }
+    } else if (w.web3) {
+      w.web3 = new w.Web3(w.web3.currentProvider);
+      w.provider = new ethers.providers.Web3Provider(w.web3.currentProvider);
+      w.provider = new ethers.providers.Web3Provider(w.web3.currentProvider);
+      const accounts = await getProvider().listAccounts()
+      if (accounts.length) {
+        const address = accounts[0]
+        this.setState({
+          gotProvider: true,
+          address,
+        })
+      }
     }
   }
   

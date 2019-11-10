@@ -64,7 +64,7 @@ export default function List({ address }: ListProps) {
     <div className="content">
       <Nav />
       <ListContents balances={mergedBalances} />
-      <NewDebt />
+      <NewDebt balances={mergedBalances} />
     </div>
   )
 }
@@ -86,11 +86,16 @@ function ListContents({ balances }: ListContentsProps) {
   console.log(balances)
   return (
     <div className="balances">
-    {Object.keys(balances.debts).map(debtor => {
-      return (
-        <ListItem address={debtor} value={balances.debts[debtor]} kind="debt" key={debtor} />
-      );
-    })}
+      {Object.keys(balances.debts).map(debtor => {
+        return (
+          <ListItem address={debtor} value={balances.debts[debtor]} kind="debt" key={debtor} />
+        );
+      })}
+      {Object.keys(balances.credits).map(creditor => {
+        return (
+          <ListItem address={creditor} value={balances.credits[creditor]} kind="credit" key={creditor} />
+        );
+      })}
     </div>
   )
 }
@@ -106,7 +111,7 @@ function ListItem({ address, value, kind }: ListItemProps) {
     <div className="balance">
       <div><Address address={address} /></div>
       <div>USDC</div>
-      <div className={kind}><span>{value.toFixed(2)}</span></div>
+      <div className={kind}><span>{(value / 10).toFixed(2)}</span></div>
     </div>
   )
 }

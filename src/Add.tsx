@@ -1,16 +1,25 @@
 import React, { useState, ChangeEvent } from 'react';
 import Nav from './Nav';
 import './add.css';
+import getProvider from './getProvider'
+import abi from './abi'
+import { ethers } from 'ethers';
 
-function submit() {
-  console.log('We have submitted!')
-}
+
 
 export default function Add() {
   const [address, setAddress] = useState('')
   const [amount, setAmount] = useState('')
 
   const isValid = address.length && amount.length && amount.match(/[0-9]*\.?[0-9]*/)
+
+  async function submit() {
+    const provider = getProvider()
+    let contractAddress = '0x152e5f3bBafF841764071ca1Ef6ebB68cd9Ed71D'
+    let contract = new ethers.Contract(contractAddress, abi, provider.getSigner())
+    await contract.recordDebt(parseInt(amount) * 10, address)
+    console.log('We have submitted!')
+  }
   
   return (
     <div className="content">

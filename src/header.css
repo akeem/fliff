@@ -8,15 +8,6 @@
     color: #FFFFFF;
 }
 
-.header-title > span:first-child {
-    letter-spacing: -4px;
-    margin-right: 5px;
-}
-
-.header-title > span:nth-child(2) {
-    letter-spacing: -4px;
-}
-
 .header-subtitle {
     font-family: Mada, sans-serif;
     font-style: normal;

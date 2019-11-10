@@ -20,15 +20,6 @@ nav a {
     width: 100%;
 }
 
-.nav-logo a > span:first-child {
-    letter-spacing: -4px;
-    margin-right: 5px;
-}
-
-.nav-logo a > span:nth-child(2) {
-    letter-spacing: -4px;
-}
-
 div.address {
     overflow: hidden;
     white-space: nowrap;

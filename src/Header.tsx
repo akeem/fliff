@@ -13,6 +13,7 @@ export const Header: React.FC = () => {
       <Link to="/list">
         <img src={logo} alt="Fliff Logomark" />
       </Link>
+      Click to Start
     </header>
   )
 };

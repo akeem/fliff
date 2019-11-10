@@ -2,26 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './newdebt.css'
 
-export default function NewDebt() {
+interface Props {
+  balances: any
+}
+
+export default function NewDebt({ balances }: Props) {
   return (
     <div className="newdebt">
       <Link className="newlink" to="/add">+</Link>
-      <BalanceTable />
+      <BalanceTable balances={balances} />
     </div>
   );
 }
 
-function BalanceTable() {
+function BalanceTable({ balances }: Props) {
+  let credit = 0
+  Object.keys(balances.credits).forEach((key: string) => {
+    credit += balances.credits[key]
+  })
+  let debt = 0
+  Object.keys(balances.debts).forEach((key: string) => {
+    debt += balances.debts[key]
+  })
+
+  let balance = credit - debt
   return (
     <div className="balancetable">
       <div className="balancetablecell">
-        <div>Balance</div><div>1486.64</div>
+        <div>Balance</div><div>{(balance / 10).toFixed(2)}</div>
       </div>
       <div className="balancetablecell">
-        <div>Credits</div><div className="credit">1500.01</div>
+        <div>Credits</div><div className="credit">{(credit / 10).toFixed(2)}</div>
       </div>
       <div className="balancetablecell">
-        <div>Debits</div><div className="debit">13.37</div>
+        <div>Debts</div><div className="debt">{(debt / 10).toFixed(2)}</div>
       </div>
     </div>
   )
