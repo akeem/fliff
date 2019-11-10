@@ -52,13 +52,13 @@ div.balance > div:nth-child(3) {
     font-size: 12px;
 }
 
-div.debit {
+div.debt {
     color: #EF5350;
 }
 div.credit {
     color: #4CAF50;
 }
-div.debit span::before {
+div.debt span::before {
     color: #EF5350;
     content: "-";
 }

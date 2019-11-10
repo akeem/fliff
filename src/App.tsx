@@ -31,17 +31,28 @@ export default class App extends React.Component<any, State> {
   }
   
   async componentDidMount() {
-    const web3 = (window as any).web3
+    let w: any = window
 
-    if (web3) {
-      (window as any).provider = new ethers.providers.Web3Provider(web3.currentProvider);
-      const accounts = await getProvider().listAccounts()
-      const address = accounts[0]
-      this.setState({
-        gotProvider: true,
-        address,
-      })
-      
+    if (w.ethereum) {
+      console.log('using modern dapp browser')
+      w.web3 = new w.Web3(w.ethereum);
+      try {
+        // Request account access if needed
+        await w.ethereum.enable();
+        console.log('enabled');
+        w.provider = new ethers.providers.Web3Provider(w.web3.currentProvider);
+        const accounts = await getProvider().listAccounts()
+        if (accounts.length) {
+          const address = accounts[0]
+          this.setState({
+            gotProvider: true,
+            address,
+          })
+        }
+      } catch (error) {
+        // User denied account access...
+        console.log(error)
+      }
     }
   }
   

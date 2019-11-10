@@ -10,21 +10,25 @@ import mergeBalances from './dataMungers'
 const queryBy = (address: string) => gql`
   {
     debtor: debts(where: { _debtor: "${address}"}) {
+      id
       amount
       _debtor
       _debtee
     }
     debtee: debts(where: { _debtee: "${address}"}) {
+      id
       amount
       _debtor
       _debtee
     }
     settler: settlements(where: { _debtor: "${address}" }) {
+      id
       amount
       _debtor
       _debtee
     }
     settlee: settlements(where: { _debtee: "${address}" }) {
+      id
       amount
       _debtor
       _debtee
@@ -102,7 +106,7 @@ function ListItem({ address, value, kind }: ListItemProps) {
     <div className="balance">
       <div><Address address={address} /></div>
       <div>USDC</div>
-      <div className={kind}><span>{value}</span></div>
+      <div className={kind}><span>{value.toFixed(2)}</span></div>
     </div>
   )
 }
