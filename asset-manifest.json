@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fliff/static/css/main.9d4d29d5.chunk.css",
+    "main.js": "/fliff/static/js/main.a372110d.chunk.js",
+    "main.js.map": "/fliff/static/js/main.a372110d.chunk.js.map",
+    "runtime-main.js": "/fliff/static/js/runtime-main.e8615fa0.js",
+    "runtime-main.js.map": "/fliff/static/js/runtime-main.e8615fa0.js.map",
+    "static/css/2.1bfb5f9e.chunk.css": "/fliff/static/css/2.1bfb5f9e.chunk.css",
+    "static/js/2.8a63abf2.chunk.js": "/fliff/static/js/2.8a63abf2.chunk.js",
+    "static/js/2.8a63abf2.chunk.js.map": "/fliff/static/js/2.8a63abf2.chunk.js.map",
+    "index.html": "/fliff/index.html",
+    "precache-manifest.78644f4a9bd316ce5dcce91b3f004283.js": "/fliff/precache-manifest.78644f4a9bd316ce5dcce91b3f004283.js",
+    "service-worker.js": "/fliff/service-worker.js",
+    "static/css/2.1bfb5f9e.chunk.css.map": "/fliff/static/css/2.1bfb5f9e.chunk.css.map",
+    "static/css/main.9d4d29d5.chunk.css.map": "/fliff/static/css/main.9d4d29d5.chunk.css.map",
+    "static/media/fliff-logomark.svg": "/fliff/static/media/fliff-logomark.68ab0e72.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8615fa0.js",
+    "static/css/2.1bfb5f9e.chunk.css",
+    "static/js/2.8a63abf2.chunk.js",
+    "static/css/main.9d4d29d5.chunk.css",
+    "static/js/main.a372110d.chunk.js"
+  ]
+}
