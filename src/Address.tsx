@@ -8,13 +8,15 @@ export default function Address({ address }: Props) {
   const [ensName, setEnsName] = useState(null);
   useEffect(() => {
     async function getEnsName() {
-      try {
-        const name = await (window as any).provider.lookupAddress(address)
-        if (name) {
-          setEnsName(name)
+      if (address.length) {
+        try {
+          const name = await (window as any).provider.lookupAddress(address)
+          if (name) {
+            setEnsName(name)
+          }
+        } catch (err) {
+          console.log(err)
         }
-      } catch (err) {
-        console.log(err)
       }
     }
 

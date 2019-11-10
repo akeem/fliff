@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 import Nav from './Nav';
 import Address from './Address';
 import NewDebt from './NewDebt';
@@ -17,7 +19,48 @@ const balances: Balance[] = [
   },
 ]
 
-export default function List() {
+const queryBy = (address: string) => gql`
+  {
+    debtor: debts(where: { _debtor: "${address}"}) {
+      id
+      count
+      amount
+      _debtor
+    }
+    debtee: debts(where: { _debtee: "${address}"}) {
+      id
+    }
+    settler: settlements(where: { _debtor: "${address}" }) {
+      id
+    }
+    settlee: settlements(where: { _debtee: "${address}" }) {
+      id
+    }
+  }
+`
+
+interface ListProps {
+  address: string
+}
+export default function List({ address }: ListProps) {
+  const { loading, error, data } = useQuery(queryBy(address))
+
+  if (loading) {
+    return (
+      <div className="content">
+        <Nav />
+        <h1>Loading...</h1>
+      </div>
+    )
+  } else if (error) {
+    return (
+      <div className="content">
+        <Nav />
+        <h1>It borked.</h1>
+      </div>
+    )
+  }
+  
   return (
     <div className="content">
       <Nav />

@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import 'mustard-ui';
 import './nav.css';
 import Address from './Address'
+import getProvider from './getProvider'
 
 export const Nav = () => {
   const [address, setAddress] = useState('')
   useEffect(() => {
     async function getAddress() {
-      const addresses = await (window as any).provider.listAccounts()
+      const addresses = await getProvider().listAccounts()
       if (addresses.length) {
         setAddress(addresses[0])
       }
