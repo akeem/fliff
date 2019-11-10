@@ -1,11 +1,20 @@
 .header-title {
     font-family: Barlow, sans-serif;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 900;
     font-size: 56px;
     line-height: 67px;
     letter-spacing: 2px;
     color: #FFFFFF;
+}
+
+.header-title > span:first-child {
+    letter-spacing: -4px;
+    margin-right: 5px;
+}
+
+.header-title > span:nth-child(2) {
+    letter-spacing: -4px;
 }
 
 .header-subtitle {

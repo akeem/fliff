@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     <header>
       <h3 className="header-subtitle">Show me the</h3>
       <h1 className="header-title">
-        FLiFF
+        <span>FLi</span><span>FF</span>
       </h1>
       <Link to="/list">
         <img src={logo} alt="Fliff Logomark" />

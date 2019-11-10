@@ -20,7 +20,7 @@ export const Nav = () => {
     <nav>
       <div className="nav-container">
         <div className="nav-logo">
-          <Link to="/">FLiFF</Link>
+          <Link to="/"><span>FLi</span><span>FF</span></Link>
         </div>
         <div className="address">
           <Address address={address} />
